@@ -1,222 +1,41 @@
-# Cricket CLI Quiz
+# Cricket Quiz
 
-> If your cricket die hard fan, then this quiz is challenge to you. It's hard to pass and even more hard to score century.
-> 
-> Wear your belt and get ready for Cricket CLI quiz.
-> 
-> Written at replit using nodejs and co-libraries and using functions programming method.
-> 
-> [Click to here take quiz](https://replit.com/@shmbajaj/cricketQuiz#index.js?embed=1&output=1)
-> 
-> [Click to here to see code on replit](https://replit.com/@shmbajaj/cricketQuiz#index.js)
+## List of Contents
+- Descritpion
+- Input
+- Output
+- Processing
+- Screenshots
+- Link
 
-<details>
-  <summary>Click here to expand code</summary>
-  
-  ```javascript
+> **Description:** Quiz app asks questions related to cricket and challenges user knwoledge about cricket, and let him prove. First user has to enter his or her name,then user is welcomed with message and quiz rules such as each time user has to enter has to answer a quesiton by choosing one option out of given four options, for each correct answer user scores +50 points whereas for each incorrect answer user scores -25 points parallely for each correct or incorrect user is informed with appropriate message. There are three levels, one each level clever user is informed with message.
 
-      var profile = {
-            user_name:" ",
-            points:0,
-      }
+<br>
 
-      const readlinesync = require('readline-sync');
-      const chalk = require('chalk');
-      const log = console.log;
-      const clear = [false,false,false];
+> **Input:** First user has to enter his or her, a user cannot enter empty name if entered then user again asked for name, after that user is welcomed and informed with rules. A user has to select `one option out of given four options` for asked question at the end of quiz user is informed with points scored and message. By `entering zero` user can back off from the quiz any time and get to know how much points scored.
 
-      const question_bank = [
-        {
-            question:"How many individual centuries have been scored in World Cup finals so far?",
-            one:"five",
-            two:"six",
-            three:"seven",
-            four:"eight",
-            ans:2,
-        },
-        {
-            question:"In the 2015 World Cup final, who triggered New Zealand's collapse which saw them lose their 
-            last seven wickets for just threethree runs?",
-            one:"James Faulkner",
-            two:"Mitchel Johnson",
-            three:"Josh Hazelwood",
-            four:"Mitchel Starc",
-            ans:1,
-        },
-        {
-            question:"In the 1996 World Cup final, only one bowler ended up picking multiple wickets. Who was it?",
-            one:"Chaminda Vaas",
-            two:"Muttiah Murlidharan",
-            three:"Sanath Jasuriya",
-            four:"Arvand di silva",
-            ans:4,
-        },
-          {
-            question:"Who remains the only captain to have not gotten a chance to bat in a World Cup final so far?",
-            one:"Steve Waugh",
-            two:"Ian chappel",
-            three:"Wasim Akhram",
-            four:"Graham Coach",
-            ans:1,
-        },
-          {
-            question:"The 2007 World Cup final in Barbados witnessed a farcical finish under dark skies. 
-            What confusion caused the controversy?",
-            one:"Ricky Ponting denied the umpires' request as he wanted to bowl out the opposition",
-            two:"Umpires feared that they had to return the next day and bowl the remaining overs",
-            three:"Sri Lanka were hell-bent to bat the remaining overs",
-            four:"Players were under the assumption DLS method can't be applied for bad light",
-            ans:2,
-        },
-            {
-            question:"Which edition holds the record for the 
-            most maidens in a World Cup final?",
-            one:"1975",
-            two:"1979",
-            three:"1983",
-            four:"1987",
-            ans:3,
-        },
-            {
-            question:"Kapil Dev's memorable running catch to dismiss 
-            Sir Viv Richards in the 1983 World Cup final is known to all. 
-            Who was the bowler in that dismissal?",
-            one:"Mohinder Amarnath",
-            two:"Balwinder Sandhu",
-            three:"Roger Binny",
-            four:"Madan Lal",
-            ans:4,
-        },
-            {
-            question:"Which bowler holds the unwanted record for the most 
-             expensive figures in a World Cup final?",
-            one:"Dilhara Fernando",
-            two:"Trent Boult",
-            three:"Nuwan Kulasekara",
-            four:"Javagal Srinath",
-            ans:4,
-        },
-            {
-            question:"Chris Woakes recently spilled the beans about England's
-             late tactical change in their third choice batsman 
-            for the Super Over in the 2019 WC final, whom did the think-tank zero in?",
-            one:"Eoin Morgan",
-            two:"Jason Roy",
-            three:"Johny Bairstrow",
-            four:"Joe Root",
-            ans:1,
-        },
+<br>
 
-      ];
+> **Output:** For each correct answer user is informed with message `Boundary` and whereas for each incorrect answer user is informed with message `Bowled`. At end of quiz or by entering `zero` user get to know points scored as `Hey user_name you scored X points` and then asked to share it on twitter if liked with hashtag `#cricketQuiz`.
 
-      function about()
-      {
-        console.clear();
-        var user_message = "Cricket Quiz, created by shubhambajaj \n";
-       // console.log(user_message);
-       log(chalk.black.underline.bgCyanBright.bold(user_message));
-      }
+<br>
 
-      function welcome()
-      {
-        profile.user_name = readlinesync.question("What is your name? ");
-        if(!profile.user_name){
-          welcome()
-        }
-      }
+> **Processing:**
+- First user has to enter his or her name.
+- After entering name, user is welcomed and told about quiz rules.
+- Then user has to select one option out of given four options to answer the question or zero to exit from the quiz.
+- When user has played quiz till the end then user is informed with score and share message.
+- For each correct or incorrect answer user is informed with appropriate message.
+- Each time user is informed with message when he or she clears a level, there is total of three levels, to clear a level user score 
 
-      function print_rules()
-      {
-        var rules="Welcome to Cricket Quiz.\n\n You have 9 questions with 4 options.
-        \n Each Correct option gives you 50 points 
-        \n Wrong option deductes 25 points.
-        \n There are 3 levels Level1, Level2 and Level3 \n To pass each level
-        you have to score 150 points.
-        \n If choice is correct then user will \n See message'Boundary'
-        else 'Bowled' \n Exit any time enter or press '0' \n"
+<br>
 
-        //console.log("\nHi "+profile.user_name+", "+rules);
-        log(chalk.black.italic.bgBlueBright.bold("\nHi "+profile.user_name+", "+rules))
-      }
+> **Screenshots:**
+![Cricket Quiz user entered his or her name then informed with rules](https://github.com/shmbajaj/cricket-quiz/blob/main/screenshots/io_name.png?raw=true)
+![Cricket Quiz user scored plus 50 points](https://github.com/shmbajaj/cricket-quiz/blob/main/screenshots/io_boundary.png?raw=true)
+![Cricket Quiz user scored minus 25 points](https://github.com/shmbajaj/cricket-quiz/blob/main/screenshots/io_bowled.png?raw=true)
+![Cricket Quiz user points scored with request to share with others on twitter](https://github.com/shmbajaj/cricket-quiz/blob/main/screenshots/points_scored.png?raw=true)
 
-      function user_about()
-      {
-        var msg1 = "\n Hey "+profile.user_name+" you scored "+profile.points+" points \n";
-        var msg2 = "Share it on twitter \nWith #cricketQuiz and score screenshot \nTag me: @shmbajaj\n";
-        //console.log(msg1);
-        log(chalk.black.bgCyanBright.bold(msg1));
-        if(profile.points!=0)
-        {
-          log(chalk.black.bgCyanBright.bold(msg2));
-        }
-      }
+<br>
 
-      function level_check(points)
-      {
-
-        if(points>=450 && clear[0]===false){
-              log(chalk.underline.red("\n Hurray "+profile.user_name+" cleared Level3"));
-              clear[0]=true;
-        }else if (points>=300 && clear[1]===false){
-              log(chalk.underline.red("\n Hurray "+profile.user_name+" cleared Level2"));
-              clear[1]=true;
-        }else if (points>=150 && clear[2]===false){
-              log(chalk.underline.red("\n Hurray "+profile.user_name+" cleared Level1"));
-              clear[2]=true;
-        }
-      }
-
-      function play()
-      {
-        let xi=0;
-        for(; xi<question_bank.length; xi++)
-        {
-          ques = question_bank[xi];
-
-          opt1 = ques.one,
-          opt2 = ques.two,
-          opt3 = ques.three,
-          opt4 = ques.four
-
-          options = [opt1,opt2,opt3,opt4];
-
-          console.log("\nQ"+(xi+1),": ",ques.question);
-          ans = readlinesync.keyInSelect(options);
-          console.log("\n");
-
-          if(ans === -1)
-          {
-            user_about();
-            break;
-          }
-          else{
-            if( (ans+1) === ques.ans )
-          {
-            profile.points+=50;
-           // console.log(""+"Boundary");
-           log(chalk.black.bgGreen("Boundary"));
-          }else{
-            profile.points-=25;
-            //console.log(""+"Bowled");
-            log(chalk.black.bgRed("Bowled"));
-          }
-          }
-
-          level_check(profile.points);
-
-        }
-        //console.log(xi);
-        if(xi === question_bank.length)
-        {
-          user_about();
-        }
-
-      }
-
-      /*++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-      about();
-      welcome();
-      print_rules();
-      play();
-  ````
-</details>
+> **Link:** [Cricket quiz](https://replit.com/@shmbajaj/cricketQuiz#index.js)
